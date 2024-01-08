@@ -1,0 +1,30 @@
+.skills {
+    margin-bottom: 180px !important;
+    .title,
+    .desc {
+        margin-top: 10px;
+        text-align: center;
+        color: #fff;
+        font-family: "Zen Kaku Gothic Antique";
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 8.25px;
+    }
+    .desc {
+        font-family: "Zen Kaku Gothic Antique";
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 2.25px;
+    }
+    .skillsBoxes {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        @media screen and (max-width: 850px) {
+            grid-template-columns: auto;
+        }
+    }
+}

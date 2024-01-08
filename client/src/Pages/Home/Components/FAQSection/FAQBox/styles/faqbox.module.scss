@@ -1,0 +1,59 @@
+.faqbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .qbox {
+        color: #fff;
+        width: 100%;
+        max-width: 800px;
+        padding: 30px;
+        border-radius: 30px;
+        transition: 0.5s;
+        transition: 0.5s;
+        &.faqboxactive {
+            transition: 0.5s;
+            background-color: #111111;
+            transition: 0.5s;
+
+            .plus {
+                rotate: 45deg;
+            }
+            .answer {
+                opacity: 0.8;
+            }
+        }
+        .query {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .qus {
+                font-family: Zen Kaku Gothic Antique;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+            .plus {
+                width: 30px;
+                height: 100%;
+                transition: 0.5s;
+                @media screen and (max-width: 500px) {
+                    width: 50px;
+                }
+            }
+        }
+        .answer {
+            padding: 20px 0px;
+            line-height: 30px;
+            transition: 0.5s;
+            font-family: Zen Kaku Gothic Antique;
+            opacity: 0;
+        }
+    }
+}

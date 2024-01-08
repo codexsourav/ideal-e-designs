@@ -1,0 +1,40 @@
+.servicebox {
+    height: auto;
+    background: #0e0e0e;
+    padding: 25px;
+    backdrop-filter: blur(100px);
+    .logo {
+        width: 70px;
+        height: 70px;
+        background:
+            linear-gradient(rgba(16, 16, 16, 1), rgba(16, 16, 16, 1)) padding-box,
+            linear-gradient(150deg, #e2ff02 0%, rgba(16, 16, 16, 1) 70%) border-box;
+        border-radius: 50em;
+        border: 3px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #e2ff02;
+    }
+    .title {
+        color: #fff;
+        font-family: Zen Kaku Gothic Antique;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 10px;
+        letter-spacing: 3px;
+    }
+    .desc {
+        margin-top: 10px;
+
+        color: #fff;
+        font-family: Zen Kaku Gothic Antique;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.25px;
+    }
+}

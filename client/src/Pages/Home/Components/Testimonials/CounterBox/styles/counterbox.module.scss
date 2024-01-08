@@ -1,0 +1,42 @@
+$textborder: #ffffffc0;
+
+.counterbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    .number {
+        color: #0d0d0d;
+        font-family: Lato;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-shadow:
+            1px 0 $textborder,
+            -1px 0 $textborder,
+            0 1px $textborder,
+            0 -1px $textborder,
+            1px 1px $textborder,
+            -1px -1px $textborder,
+            1px -1px $textborder,
+            -1px 1px $textborder;
+
+        @media screen and (max-width: 600px) {
+            font-size: 40px;
+        }
+    }
+    .title {
+        color: rgba(255, 255, 255, 0.58);
+        font-family: Lato;
+        font-size: 18px;
+        text-transform: capitalize;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @media screen and (max-width: 600px) {
+            font-size: 14px;
+        }
+    }
+}

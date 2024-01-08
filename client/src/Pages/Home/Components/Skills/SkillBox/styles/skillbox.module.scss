@@ -1,0 +1,31 @@
+.skillbox {
+    border-radius: 30px;
+    height: auto;
+    background: rgba(17, 17, 17, 0.71);
+    padding: 40px;
+    display: flex;
+    gap: 30px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h2 {
+            color: #fff;
+            font-family: Zen Kaku Gothic Antique;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 4.2px;
+        }
+        p {
+            color: #fff;
+            font-family: Zen Kaku Gothic Antique;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2.7px;
+        }
+    }
+}

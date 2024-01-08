@@ -1,0 +1,38 @@
+.reviewbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-direction: column;
+    .desc {
+        color: #fff;
+        text-align: center;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 1.8px;
+    }
+    .name {
+        color: rgba(255, 255, 255, 0.31);
+        text-align: center;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.8px;
+    }
+    .location {
+        color: #fff;
+        text-align: center;
+        font-family: Lato;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.5px;
+    }
+}

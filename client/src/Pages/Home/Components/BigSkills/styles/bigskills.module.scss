@@ -1,0 +1,69 @@
+.bigskills {
+    margin-bottom: 180px !important;
+    position: relative;
+    .title,
+    .desc {
+        margin-top: 10px;
+        text-align: center;
+        color: #fff;
+        font-family: "Zen Kaku Gothic Antique";
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 8.25px;
+    }
+    .desc {
+        font-family: "Zen Kaku Gothic Antique";
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 2.25px;
+    }
+    .bgtitle {
+        color: rgba(35, 35, 35, 0.08);
+        font-family: Lato;
+        font-size: 300px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: 3px;
+        position: absolute;
+        margin-top: -150px;
+        left: 0;
+        user-select: none;
+        z-index: -1;
+
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+    }
+    .content {
+        display: grid;
+        grid-template-columns: 500px auto;
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: auto;
+        }
+        .imageSec {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+
+            img {
+                height: 400px;
+            }
+            @media screen and (max-width: 1000px) {
+                display: none;
+                width: 100%;
+            }
+        }
+        .skillsSection {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 50px;
+        }
+    }
+}

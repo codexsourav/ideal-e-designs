@@ -1,0 +1,65 @@
+$laptopWidthLG: 1200px;
+$laptopWidthMID: 550px;
+$laptopWidthSML: 350px;
+
+$screenWidthLG: 830px;
+$screenHeightLG: 536px;
+
+$screenWidthMID: 380px;
+$screenHeightMID: 240px;
+
+$screenWidthSML: 245px;
+$screenHeightSML: 155px;
+
+.laptopview {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+    img {
+        width: $laptopWidthLG;
+        @media screen and (max-width: 1200px) {
+            width: $laptopWidthMID;
+        }
+        @media screen and (max-width: 600px) {
+            width: $laptopWidthSML;
+        }
+    }
+    // @media screen and (max-width: 900px) {
+    //     display: none;
+    // }
+    .screen {
+        width: $screenWidthLG;
+        height: $screenHeightLG;
+        background-color: #000;
+        position: absolute;
+        margin-bottom: 90px;
+        margin-left: 4px;
+
+        @media screen and (max-width: 1200px) {
+            width: $screenWidthMID;
+            height: $screenHeightMID;
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: $screenWidthSML;
+            height: $screenHeightSML;
+            margin-bottom: 28px;
+        }
+
+        video {
+            width: $screenWidthLG;
+            height: 100%;
+            opacity: 1;
+            object-fit: cover;
+            @media screen and (max-width: 1200px) {
+                width: $screenWidthMID;
+            }
+            @media screen and (max-width: 600px) {
+                width: $screenWidthSML;
+            }
+        }
+    }
+}
