@@ -29,7 +29,7 @@ export const sendMail = async (req: Request, res: Response) => {
     }
 
     const ipAddress = req.clientIp;
-    console.log();
+    console.log(ipAddress);
 
     let mapData = null;
     const resIp = await axios.get(`https://ipapi.com/ip_api.php?ip=${ipAddress}`);
