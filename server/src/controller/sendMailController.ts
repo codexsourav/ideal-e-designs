@@ -28,7 +28,7 @@ export const sendMail = async (req: Request, res: Response) => {
         return res.status(203).json({ message: "Type Your Message." });
     }
 
-    const ipAddress = req.clientIp;
+    const ipAddress = req.clientIp?.replace("::ffff:", "");
     let mapData = null;
     const resIp = await axios.get(`https://ipapi.com/ip_api.php?ip=${ipAddress}`);
     const data: IPAddressType = resIp.data;
