@@ -22,10 +22,10 @@ const BigSkills = () => {
                     </div>
                     <div className={styles.skillsSection}>
 
-                        <BigSkillBox icon={<FaRegMap size={45} />} title='Discover' desc='Our strategy is simplicity. Yes, go lean and start small but don’t skip steps.' />
-                        <BigSkillBox icon={<TbPhotoFilled size={42} />} title='Design' desc='Our strategy is simplicity. Yes, go lean and start small but don’t skip steps.' />
-                        <BigSkillBox icon={<FaCode size={45} />} title='Develop' desc='Our strategy is simplicity. Yes, go lean and start small but don’t skip steps.' />
-                        <BigSkillBox icon={<IoRocketOutline size={45} />} title='Deploy' desc='Our strategy is simplicity. Yes, go lean and start small but don’t skip steps.' />
+                        <BigSkillBox icon={<FaRegMap size={45} />} title='Discover' desc='Embark on a visionary odyssey with our expert discovery process, unlocking the latent potential of your ideas and paving the way for a transformative digital journey.' />
+                        <BigSkillBox icon={<TbPhotoFilled size={42} />} title='Design' desc='Immerse yourself in a realm of captivating and functional designs, meticulously tailored to elevate your brand, ensuring an unparalleled and engaging user experience.' />
+                        <BigSkillBox icon={<FaCode size={45} />} title='Develop' desc='Watch your vision come alive through our alchemy of innovation and precision, crafting robust and scalable solutions that stand at the forefront of digital prowess.' />
+                        <BigSkillBox icon={<IoRocketOutline size={45} />} title='Deploy' desc=' Unleash your creations seamlessly onto the digital canvas, as we orchestrate a flawless deployment, optimizing performance and ensuring user satisfaction. At Ideal-E-Designs, we turn concepts into captivating realities.' />
 
                     </div>
 

@@ -4,9 +4,11 @@ import MobileFream from '../../../../Components/MobileFream/MobileFream';
 import { useDispatch } from 'react-redux';
 
 import { setContactPopUp } from '../../../../Redux/ContactPopUp/contactpopup';
+import { useWindowScrollPositions } from '../../../../Hooks/useWindowScrollPositions';
 
 const Header = () => {
     const dispatch = useDispatch();
+    const { scrollY } = useWindowScrollPositions();
     return (
         <div className={`${styles.headerSection} container`}>
             <div className={`${styles.header} `}>
@@ -21,9 +23,9 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.mouse}>
+            {scrollY > 10 ? null : <div className={styles.mouse}>
                 <div className={styles.mouseBtn}></div>
-            </div>
+            </div>}
         </div>
     );
 };

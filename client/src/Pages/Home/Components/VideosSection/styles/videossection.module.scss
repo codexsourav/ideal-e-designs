@@ -66,3 +66,35 @@
         }
     }
 }
+
+.watchPopup {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(0px);
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 0.5s;
+    &.active {
+        backdrop-filter: blur(20px);
+        display: flex;
+    }
+    .player {
+        width: 90vw;
+        video {
+            width: 100%;
+        }
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 40px;
+        }
+    }
+}

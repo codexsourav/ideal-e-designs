@@ -1,0 +1,14 @@
+.portfoliotab {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    overflow-y: scroll;
+    max-lines: 1;
+    text-wrap: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

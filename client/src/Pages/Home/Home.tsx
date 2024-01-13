@@ -8,16 +8,21 @@ import VideosSection from "./Components/VideosSection/VideosSection";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import FAQSection from "./Components/FAQSection/FAQSection";
 import LaptopView from "./Components/LaptopView/LaptopView";
+import Portfolio from "./Components/Portfolio/Portfolio";
 
 function Home() {
     return (
         <>
             <Header />
+            <div id="about"></div>
             <AboutUs />
             <LaptopView />
             <Skills />
             <BigSkills />
+            <div id="services"></div>
             <Services />
+            <div id="portfolio"></div>
+            <Portfolio />
             <VideosSection />
             <Testimonials />
             <FAQSection />

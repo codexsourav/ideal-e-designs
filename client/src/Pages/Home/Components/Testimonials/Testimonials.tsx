@@ -25,9 +25,9 @@ const Testimonials = () => {
             </div>
             <div className={styles.counter} data-aos="fade-up">
                 <CounterBox count='10K+' title='Happy Clients' />
-                <CounterBox count='80+' title='App Devloped' />
-                <CounterBox count='5+' title='Years Exprience' />
-                <CounterBox count='10+' title='Employes' />
+                <CounterBox count='80+' title='App Developed' />
+                <CounterBox count='5+' title='Years Experience' />
+                <CounterBox count='10+' title='Our Team' />
             </div>
         </div>
     );

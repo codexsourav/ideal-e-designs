@@ -7,12 +7,14 @@ import AnimatedCursor from 'react-animated-cursor';
 import Aos from 'aos';
 import ContactPopUp from '../Components/ContactPopUp/ContactPopUp';
 import { ToastContainer } from 'react-toastify';
+import useWindowDimensions from '../Hooks/useWindowDimensions';
 
 interface AppWrapperProps {
     children: ReactNode;
 }
 
 const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
+    const { width } = useWindowDimensions();
     useEffect(() => {
         Aos.init({ duration: 1400 });
 
@@ -41,7 +43,7 @@ const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
                 zIndex: "9999999",
             }} />
         <ToastContainer
-            position="top-right"
+            position={width > 600 ? "top-right" : "bottom-center"}
             autoClose={3000}
             hideProgressBar={false}
             newestOnTop={true}

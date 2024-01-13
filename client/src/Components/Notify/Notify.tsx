@@ -36,7 +36,7 @@ const Notify = () => {
         <>
             <div className={`${styles.notify} container`} data-aos="fade-up">
                 <div className={styles.notifyMe}>
-                    <h1 className={styles.title}>Elevate the way you source design</h1>
+                    <h1 className={styles.title}>Let's Connected Together</h1>
                     <p className={styles.desc}>Get ready to start producing stunning, efficient design work without the hassles of hiring. Soon available.</p>
                     <div className={styles.inputSection}>
                         <input name="email" type="email" placeholder="Email ID" className={styles.input} value={email} onChange={(e) => setEmail(e.target.value)} />

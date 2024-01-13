@@ -34,7 +34,7 @@ const Navbar = () => {
     return (
 
         <>
-            <div className={`${styles.navbar} ${scrollY <= 0 ? null : (isScroll ? styles.navbarShow : styles.navbarHide)}`} >
+            <div className={`${styles.navbar} ${scrollY <= 0 ? null : (isScroll ? styles.navbarShow : styles.navbarHide)}  `} >
                 <div className={styles.logoSection} >
                     <FiMenu className={styles.menuBtn} size={25} style={{ display: "none" }} onClick={() => setShowNav(true)} />
                     <img src='/logo.png' alt="our logo" className={styles.logo} height={60} />
@@ -43,9 +43,9 @@ const Navbar = () => {
                     <IoCloseOutline className={styles.menuCloseBtn} size={50} style={{ display: "none" }} onClick={() => setShowNav(false)} />
                     <ul className={styles.menu}>
                         <li><Link to="/">Home</Link></li>
-                        <li><a href="#">About US</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our Work</a></li>
+                        <li><a href="#about">About US</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Our Work</a></li>
                     </ul>
                 </div>
                 <div className={styles.actions} onClick={() => dispatch(setContactPopUp(true))}>

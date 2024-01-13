@@ -32,6 +32,7 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+
 body {
   background-color: #0D0D0D;
   color: #fff;
@@ -63,6 +64,33 @@ body {
 
 .Toastify__toast-body {
   color: #fff !important;
+}
+
+.pageview {
+  margin: 180px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pageview p {
+  padding: 15px 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .pageview {
+    margin: 100px;
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pageview {
+    margin: 0;
+    margin-bottom: 100px;
+    margin-top: 150px;
+  }
 }
 
 @media screen and (max-width: 900px) {
