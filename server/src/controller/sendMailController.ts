@@ -28,7 +28,9 @@ export const sendMail = async (req: Request, res: Response) => {
         return res.status(203).json({ message: "Type Your Message." });
     }
 
-    const ipAddress = req.clientIp?.replace("::ffff:", "");
+    const ipAddress = req.clientIp;
+    console.log();
+
     let mapData = null;
     const resIp = await axios.get(`https://ipapi.com/ip_api.php?ip=${ipAddress}`);
     const data: IPAddressType = resIp.data;
@@ -49,7 +51,7 @@ export const sendMail = async (req: Request, res: Response) => {
             continent: mapData!.continent_name,
             country: mapData!.country_name,
             currency: mapData!.currency.code,
-            daylight: mapData!.time_zone.is_daylight_saving ? "YES" : "NO",
+            daylight: mapData!.time_zone.is_daylight_saving ? "NO" : "YES",
             email: email,
             ip: mapData!.ip,
             lat: mapData!.latitude,
@@ -57,6 +59,8 @@ export const sendMail = async (req: Request, res: Response) => {
             message: message,
             osinfo: req.headers["user-agent"]!,
             timezone: mapData!.time_zone.code,
+            region_name: mapData!.region_name,
+            zipcode: mapData!.region_name,
         }
 
         const mailRes: SMTPTransport.SentMessageInfo = await sendNewEmail(email, `${name} - Contact Us`, contactMailTemplate(templateData));
