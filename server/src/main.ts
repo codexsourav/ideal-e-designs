@@ -13,7 +13,6 @@ const app: express.Express = express();
 env.config();
 
 const initApp = () => {
-
     const port = process.env.PORT || 8000;
     app.use(
         cors(),
@@ -36,7 +35,6 @@ const initApp = () => {
     });
 
 }
-
 
 initApp();
 
