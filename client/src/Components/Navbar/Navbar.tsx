@@ -6,15 +6,13 @@ import { RiCustomerService2Line } from "react-icons/ri";
 import { useWindowIsScroll } from '../../Hooks/useWindowIsScroll';
 import { useWindowScrollPositions } from '../../Hooks/useWindowScrollPositions';
 import { Link, useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setContactPopUp } from '../../Redux/ContactPopUp/contactpopup';
+
 
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false);
     const isScroll = useWindowIsScroll();
     const { scrollY } = useWindowScrollPositions();
     const location = useLocation();
-    const dispatch = useDispatch();
     useEffect(() => {
         if (showNav) {
             setShowNav(false);

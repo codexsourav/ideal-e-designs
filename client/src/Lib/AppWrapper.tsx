@@ -29,7 +29,7 @@ const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
         <Notify />
         <Footer />
         <ContactPopUp />
-        {/* <AnimatedCursor
+        <AnimatedCursor
             innerSize={10}
             outerSize={40}
             innerScale={1}
@@ -43,7 +43,7 @@ const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
             outerStyle={{
                 border: '3px solid #ffffff50',
                 zIndex: "9999999",
-            }} /> */}
+            }} />
         <ToastContainer
             position={width > 600 ? "top-right" : "bottom-center"}
             autoClose={3000}

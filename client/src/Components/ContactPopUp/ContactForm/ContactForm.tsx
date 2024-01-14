@@ -3,8 +3,8 @@ import { TfiClose } from "react-icons/tfi";
 import styles from './styles/contactform.module.css'
 import { showAsyncToast, showAsyncToastError, showAsyncToastSuccess } from '../../../Lib/showToast';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import StoreType, { AppDispatch } from '../../../Interfaces/storeInterface';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../../Interfaces/storeInterface';
 import { AxiosError, AxiosResponse } from 'axios';
 import makeApi from '../../../Lib/makeApi';
 import { setContactPopUp } from '../../../Redux/ContactPopUp/contactpopup';
@@ -22,7 +22,7 @@ function ContactForm({ isfooter = false }: { isfooter?: boolean }) {
 
     const handelFormData = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const contactPopUpState = useSelector((state: StoreType) => state.contactpopup);
+
 
 
     const dispatch = useDispatch<AppDispatch>();

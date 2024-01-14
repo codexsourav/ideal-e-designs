@@ -1,9 +1,6 @@
 import React from 'react';
 import styles from './styles/mobilefream.module.css'
-import { GoMute, GoUnmute } from "react-icons/go";
 const MobileFream = () => {
-
-
 
     return (
         <>
