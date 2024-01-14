@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import axios from "axios";
 import EmailsModel from "../db/models/emailModel.js";
 import sendNewEmail from "../mail/mailer.js";
-import { contactMailTemplate } from "../mail/templates/contactMailTemplate.js";
+import { contactMailTemplate, thankYouMail } from "../mail/templates/contactMailTemplate.js";
 import { isValidMobile, isValidateEmail } from "../utils/validate.js";
 import SubscribeModel from "../db/models/subscribeMoadel.js";
 export const sendMail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -24,7 +24,7 @@ export const sendMail = (req, res) => __awaiter(void 0, void 0, void 0, function
     else if (!isValidateEmail(email)) {
         return res.status(203).json({ message: "Enter A Valid Email ID" });
     }
-    else if (!phone) {
+    else if (phone.toString().length > 10) {
         return res.status(203).json({ message: "Please Enter Your Phone No." });
     }
     else if (!isValidMobile(phone.toString())) {
@@ -64,8 +64,9 @@ export const sendMail = (req, res) => __awaiter(void 0, void 0, void 0, function
             region_name: mapData.region_name,
             zipcode: mapData.region_name,
         };
-        const mailRes = yield sendNewEmail(email, `${name} - Contact Us`, contactMailTemplate(templateData));
-        console.log(mailRes.response);
+        const mailRes = yield sendNewEmail(email, `${name} - Contact Us`, contactMailTemplate(templateData), {});
+        const mailResUser = yield sendNewEmail(email, `Thank You for Connecting with Us.`, thankYouMail(name), { to: email });
+        console.log(mailRes.response, mailResUser.response);
         return res.status(200).json({ message: "Email Send Successfully" });
     }
     catch (error) {

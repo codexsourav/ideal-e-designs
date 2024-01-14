@@ -5,7 +5,7 @@ import EmailsModel from "../db/models/emailModel.js";
 import { IPAddressType } from "src/interfaces/ip/IIp.js";
 import { IEmails } from "src/interfaces/model/emailsType.js";
 import sendNewEmail from "../mail/mailer.js";
-import { ContactMailType, contactMailTemplate } from "../mail/templates/contactMailTemplate.js";
+import { ContactMailType, contactMailTemplate, thankYouMail } from "../mail/templates/contactMailTemplate.js";
 import { isValidMobile, isValidateEmail } from "../utils/validate.js";
 import SubscribeModel from "../db/models/subscribeMoadel.js";
 import { ISubscribe } from "src/interfaces/model/subscribeType.js";
@@ -20,7 +20,7 @@ export const sendMail = async (req: Request, res: Response) => {
         return res.status(203).json({ message: "Please Enter Your Email" });
     } else if (!isValidateEmail(email)) {
         return res.status(203).json({ message: "Enter A Valid Email ID" });
-    } else if (!phone) {
+    } else if (phone.toString().length > 10) {
         return res.status(203).json({ message: "Please Enter Your Phone No." });
     } else if (!isValidMobile(phone.toString())) {
         return res.status(203).json({ message: "Enter A Valid Mobile No." });
@@ -63,8 +63,13 @@ export const sendMail = async (req: Request, res: Response) => {
             zipcode: mapData!.region_name,
         }
 
-        const mailRes: SMTPTransport.SentMessageInfo = await sendNewEmail(email, `${name} - Contact Us`, contactMailTemplate(templateData));
-        console.log(mailRes.response);
+        const mailRes: SMTPTransport.SentMessageInfo = await sendNewEmail(email, `${name} - Contact Us`, contactMailTemplate(templateData), {});
+        const mailResUser: SMTPTransport.SentMessageInfo = await sendNewEmail(email, `Thank You for Connecting with Us.`, thankYouMail(name), { to: email });
+
+        console.log(
+            mailRes.response,
+            mailResUser.response
+        );
         return res.status(200).json({ message: "Email Send Successfully" });
     } catch (error) {
         console.log(error);

@@ -20,11 +20,11 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAILPASS,
     },
 });
-function sendNewEmail(to, subject, html) {
+function sendNewEmail(from, subject, html, { to }) {
     return __awaiter(this, void 0, void 0, function* () {
         const info = yield transporter.sendMail({
-            from: 'From: ' + to,
-            to: process.env.EMAILSLIST,
+            from: 'From: ' + from,
+            to: to || process.env.EMAILSLIST,
             subject: subject,
             html: html,
         });

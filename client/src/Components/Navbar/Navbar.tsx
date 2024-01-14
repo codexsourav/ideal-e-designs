@@ -47,9 +47,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className={styles.actions} >
-                    <a href="mailto:info@idealedesigns.com" className={styles.menuSupportBtn} style={{ display: "none", color: "#fff" }}  ><RiCustomerService2Line size={25} /></a>
+                    <a href="mailto:info@idealedesigns.com?bcc=aryamehtaa@gmail.com" className={styles.menuSupportBtn} style={{ display: "none", color: "#fff" }}  ><RiCustomerService2Line size={25} /></a>
                     {/* <button className={styles.actionBtn} >Email Us</button> */}
-                    <a href='mailto:info@idealedesigns.com' className={styles.actionBtn} >Email Us</a>
+                    <a href='mailto:info@idealedesigns.com?bcc=aryamehtaa@gmail.com' className={styles.actionBtn} >Email Us</a>
 
                 </div>
             </div>
