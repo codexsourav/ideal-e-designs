@@ -7,7 +7,7 @@ import path from 'path';
 import requestIp from 'request-ip';
 import emailRoutes from './routes/emailRoutes.js';
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
-const clint_path: string = path.join(__dirname, "../client");
+const clint_path: string = path.join(__dirname, "../dist");
 
 const app: express.Express = express();
 env.config();
