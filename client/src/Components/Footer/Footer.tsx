@@ -39,8 +39,8 @@ function Footer() {
                         <a href="#"><FaLinkedin /></a>
                     </div>
                     <div className={styles.contact}>
-                        <a href="mailto:info@idealedesigns.com">info@idealedesigns.com</a>
-                        <a href="tel:+91 9315509430">+91 9315509430</a>
+                        <a href="mailto:info@idealedesigns.com">Email: info@idealedesigns.com</a>
+                        <a href="tel:+91 9315509430">Call: +91 9315509430</a>
                     </div>
                     <div className={styles.fotterLinks} >
                         <ul>
