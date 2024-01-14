@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
                 <div className={styles.contentSection}>
                     <h1 className={styles.title} data-aos="fade-up">Transforming Idea’s through Technology</h1>
-                    <p className={styles.desc} data-aos="fade-up" data-aos-delay="500">Innovative design solutions for technology firms and emerging businesses weary of the typical aesthetic methodology. Arriving shortly.</p>
+                    <p className={styles.desc} data-aos="fade-up" data-aos-delay="500">Empowering  your Idea with the seamless fusion of innovation and technology. witness your ideas evolving into reality, shaped by the transformative force of cutting-edge technological solutions.</p>
                     <div className={styles.action} >
                         <button onClick={() => dispatch(setContactPopUp(true))} className={styles.actionBtn}>LET`S TALK</button>
                     </div>

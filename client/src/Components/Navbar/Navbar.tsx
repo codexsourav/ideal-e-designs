@@ -48,9 +48,11 @@ const Navbar = () => {
                         <li><a href="#portfolio">Our Work</a></li>
                     </ul>
                 </div>
-                <div className={styles.actions} onClick={() => dispatch(setContactPopUp(true))}>
-                    <RiCustomerService2Line className={styles.menuSupportBtn} size={25} style={{ display: "none" }} />
-                    <button className={styles.actionBtn} >Let`s Talk</button>
+                <div className={styles.actions} >
+                    <a href="mailto:info@idealedesigns.com" className={styles.menuSupportBtn} style={{ display: "none", color: "#fff" }}  ><RiCustomerService2Line size={25} /></a>
+                    {/* <button className={styles.actionBtn} >Email Us</button> */}
+                    <a href='mailto:info@idealedesigns.com' className={styles.actionBtn} >Email Us</a>
+
                 </div>
             </div>
         </>

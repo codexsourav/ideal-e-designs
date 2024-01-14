@@ -21,7 +21,8 @@ const AppRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path='/tech/recatnative' element={<ReactNative />} />
+
+            <Route path='/tech/reactnative' element={<ReactNative />} />
             <Route path='/tech/flutter' element={<Flutter />} />
             <Route path='/tech/nativeandroid' element={<NativeAndroid />} />
             <Route path='/tech/nativeios' element={<NativeIos />} />

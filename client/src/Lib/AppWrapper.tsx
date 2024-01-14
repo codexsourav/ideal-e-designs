@@ -8,6 +8,7 @@ import Aos from 'aos';
 import ContactPopUp from '../Components/ContactPopUp/ContactPopUp';
 import { ToastContainer } from 'react-toastify';
 import useWindowDimensions from '../Hooks/useWindowDimensions';
+import ContactForm from '../Components/ContactPopUp/ContactForm/ContactForm';
 
 interface AppWrapperProps {
     children: ReactNode;
@@ -24,10 +25,11 @@ const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
         <Loader />
         <Navbar />
         {children}
+        <ContactForm isfooter={true} />
         <Notify />
         <Footer />
         <ContactPopUp />
-        <AnimatedCursor
+        {/* <AnimatedCursor
             innerSize={10}
             outerSize={40}
             innerScale={1}
@@ -41,7 +43,7 @@ const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
             outerStyle={{
                 border: '3px solid #ffffff50',
                 zIndex: "9999999",
-            }} />
+            }} /> */}
         <ToastContainer
             position={width > 600 ? "top-right" : "bottom-center"}
             autoClose={3000}

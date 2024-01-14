@@ -4,10 +4,14 @@ services:
   mongodb:
     image: mongo
     container_name: mongodb-db
+    restart: always
+    environment:
+        - MONGO_INITDB_ROOT_USERNAME=admin
+        - MONGO_INITDB_ROOT_PASSWORD=pass
     ports:
       - "27018:27017"
     volumes:
-      - mongodb_data:/data/db
+      - mongodb_data:/data/mongodb
   # redis:
   #   image: redis
   #   container_name: redis-app

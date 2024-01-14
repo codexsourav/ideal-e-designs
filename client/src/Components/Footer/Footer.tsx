@@ -45,7 +45,7 @@ function Footer() {
                     <div className={styles.fotterLinks} >
                         <ul>
                             <li className={styles.title}>Mobile Development</li>
-                            <li><Link to="/tech/recatnative">React Native Development</Link></li>
+                            <li><Link to="/tech/reactnative">React Native Development</Link></li>
                             <li><Link to="/tech/flutter">Flutter App Development</Link></li>
                             <li><Link to="/tech/nativeandroid">Native Android Development</Link></li>
                             <li><Link to="/tech/nativeios">Native iOS Development</Link></li>

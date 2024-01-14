@@ -17,12 +17,31 @@
         width: calc(100% - 10px);
         border-radius: 50px;
         height: 100%;
-        background-color: #fff;
+        background-color: #000000;
         overflow: hidden;
-        img {
+        img,
+        video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            // margin-top: 500px;
+        }
+        .muteBtn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            z-index: 1;
+            margin-bottom: 40px;
+            opacity: 0.4;
+            margin-right: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
         }
     }
 }
